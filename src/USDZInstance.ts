@@ -3,7 +3,7 @@ import { RenderDelegateInterface } from './ThreeJsRenderDelegate';
 import * as THREE from 'three';
 
 /**
- * Represents a model loaded by the USDZLoader and handles its lifecycle in the THREE context
+ * Represents a model loaded by the USDZLoader and handles its lifecycle in the THREE context.
  */
 export class USDZInstance {
   driver: any;
