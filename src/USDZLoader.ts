@@ -1,12 +1,12 @@
 import { RenderDelegateInterface } from './ThreeJsRenderDelegate';
-import type { USDModule } from './USDModule.d.ts';
+// import type { USDModule } from './USDModule.d.ts';
 import { USDZInstance } from './USDZInstance';
 import { USDZLoaderUtils } from './Utils/utils';
 import * as THREE from 'three';
 
 export class USDZLoader {
   // The USD module from AutoDesk. Only one should be there at a the time.
-  private usdModule: USDModule | null = null;
+  private usdModule: any = null;
 
   // Tells if a model is currently loading
   private modelIsLoading = false;
@@ -59,7 +59,7 @@ export class USDZLoader {
    * Gathers the module while ensuring it's ready to be used
    * Returns null if the loading was completed with error
    */
-  public async waitForModuleLoadingCompleted(): Promise<USDModule | null> {
+  public async waitForModuleLoadingCompleted(): Promise<any> {
     while (!this.moduleLoadingCompleted) {
       await new Promise((resolve) => setTimeout(resolve, 10));
     }
@@ -111,7 +111,7 @@ export class USDZLoader {
    * @param targetGroup
    */
   private loadUsdFileFromArrayBuffer(
-    usdModule: USDModule,
+    usdModule: any,
     filename: string,
     usdFile: ArrayBuffer,
     targetGroup: THREE.Group,
