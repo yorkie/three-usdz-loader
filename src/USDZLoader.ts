@@ -1,5 +1,5 @@
 import { RenderDelegateInterface } from './ThreeJsRenderDelegate';
-import { USDModule } from './USDModule';
+import type { USDModule } from './USDModule';
 import { USDZInstance } from './USDZInstance';
 import { USDZLoaderUtils } from './Utils/utils';
 import * as THREE from 'three';
