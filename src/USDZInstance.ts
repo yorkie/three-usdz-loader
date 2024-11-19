@@ -1,15 +1,15 @@
 import { RenderDelegateInterface } from './ThreeJsRenderDelegate';
-import { USDModule } from './USDModule';
+// import { USDModule } from './USDModule';
 import * as THREE from 'three';
 
 /**
  * Represents a model loaded by the USDZLoader and handles its lifecycle in the THREE context
  */
 export class USDZInstance {
-  driver: USDModule.HdWebSyncDriver;
+  driver: any;
   renderInterface: RenderDelegateInterface;
   fileName: string;
-  usdModule: USDModule;
+  usdModule: any;
   targetGroup: THREE.Group;
 
   // Animations
@@ -18,8 +18,8 @@ export class USDZInstance {
 
   constructor(
     fileName: string,
-    usdModule: USDModule,
-    driver: USDModule.HdWebSyncDriver,
+    usdModule: any,
+    driver: any,
     renderInterface: RenderDelegateInterface,
     targetGroup: THREE.Group,
   ) {
